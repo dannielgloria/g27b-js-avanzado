@@ -1,0 +1,18 @@
+{
+  "name": "3-asincronia",
+  "version": "1.0.0",
+  "description": "Proyecto para entender asincronia",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "echo \"Aqui pondria un Scritp de ejecucion de produccion, si existera\" && exit 1",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dani": "nodemon index.js"
+  },
+  "author": "Daniel Gloria",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
