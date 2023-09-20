@@ -15,6 +15,7 @@ class Callback{
             console.log("Proceso 3: Compra exitosa")
         }
 
+        //Ejemplo de CallBack
         const validatePaymentCallback = (showSuccessMessage) =>{
             setTimeout(()=>{
                 console.log("Proceso 2: Validando la tarjeta de credito");
@@ -22,8 +23,9 @@ class Callback{
             }, 10000)
         }
 
+
         console.log('Proceso 1: Presiona el boton de comprar');
-        validatePaymentCallback(showSuccessMessage);
+        validatePaymentCallback(showSuccessMessage);// este es un callback
         console.log('Proceso 4: Notificacion de mi amix');
     }
 }
