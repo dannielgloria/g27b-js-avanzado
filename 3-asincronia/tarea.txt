@@ -1,0 +1,14 @@
+Hacer un proceso de pedir regalo a santa claus con callback, promesas y async await
+
+Proceso de ejercicio en clase
+1 Presiona el boton boton de comprar
+2 Validando la tarjeta
+3 Ver el mensaje de "gracias joven"
+4 Entregaremos el paquete N dia
+
+Proceso de regalo a santa claus
+1 Hacer cartita y mandarla al polo norte
+2 Validando si se portaron bien
+    (reciben carbon o su regalo)
+3 Jo jo jo feliz navidad
+4 Revisa tu arbol de navidad
