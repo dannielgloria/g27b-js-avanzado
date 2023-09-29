@@ -1,35 +1,34 @@
 {
   "name": "5-api-ejemplo-sql",
   "version": "1.0.0",
-  "description": "API RESTful using Express and connected to data base (MySQL)",
+  "description": "API RESTful usando Express y conectada a una base de datos (MySQL)",
   "main": "index.js",
   "scripts": {
-    "production": "babel-node --presets=@babel/preset-env",
-    "dev": "nodemon --exec npm run production src/index.js"
+    "production":"babel-node --preset=@babel/preset-env",
+    "dev": "nodemon --exec npm run production src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "API",
-    "RESTful",
-    "Express",
+    "RESful",
     "MySQL",
     "Services",
     "Controllers",
-    "Commons",
-    "Routes"
+    "DataBase"
   ],
-  "author": "Daniel Gloria",
+  "author": "g27b-js-avanzado",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.19.3",
-    "@babel/node": "^7.19.1",
-    "@babel/preset-env": "^7.19.3",
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.22.20",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "promise-mysql": "^5.2.0"
   }
 }

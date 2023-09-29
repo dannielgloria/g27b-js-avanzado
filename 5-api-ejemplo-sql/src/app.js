@@ -1,21 +1,18 @@
 import express from "express";
-import { http } from "follow-redirects";
-import morgan from "morgan";
+import morgan from "morgan"
 
 import productRoutes from "./routes/index.routes"
 
-
 const app = express();
 
-/* Setting the port to 4000. */
+/** Se setea el puerto en el que correra nuestro server */
 app.set("port",4000);
 
-/* Middlewares */
+/** Aqui nosotros declaramos que hacemos uso de Middlewares */
 app.use(morgan("dev"));
 app.use(express.json());
 
-/* Importing the productRoutes from the product.routes file. */
-app.use("/api-restful/products",productRoutes);
+/** Importamos nuestras rutas de la API (endpoints) de products.routes */
+app.use("/api-restful/productos", productRoutes);
 
 export default app;
-

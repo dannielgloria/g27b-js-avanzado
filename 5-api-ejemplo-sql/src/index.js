@@ -1,11 +1,11 @@
 import app from "./app"
 
 /**
- * It starts the server on the port specified in the app.set("port") function.
+ * Inicializamos el servidor en un puerto especifico
  */
-const main = ()=>{
+const main=()=>{
     app.listen(app.get("port"));
-    console.log("Server on port:", app.get("port"))
-};
+    console.log('Server on port:', app.get("port"));
+}
 
 main();

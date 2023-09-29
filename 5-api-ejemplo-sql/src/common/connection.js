@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 
 const getConnection = () =>{
     return connection
-};
+}
 
 module.exports={
     getConnection
