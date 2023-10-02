@@ -13,6 +13,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 /** Importamos nuestras rutas de la API (endpoints) de products.routes */
-app.use("/api-restful/productos", productRoutes);
+app.use("/api-restful/products", productRoutes);
 
 export default app;
