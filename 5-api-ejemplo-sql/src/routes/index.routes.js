@@ -10,5 +10,7 @@ router.get("/allProducts", productController.getAllProducts); // GET http://127.
 //C create
 router.post("/newProduct", productController.postProduct); // POST http://127.0.0.1:4000/api-restful/products/newProduct
 //R read
-router.get("/productBySKU/:sku", productController.getProductBySku); // GET http://127.0.0.1:4000/api-restful/products/allProducts
+router.get("/productBySKU/:sku", productController.getProductBySku); // GET http://127.0.0.1:4000/api-restful/products/productBySKU/:
+//U update
+router.put("/updateBySKU/:sku", productController.updateProduct); // GET http://127.0.0.1:4000/api-restful/products/updateBySKU/:
 export default router;

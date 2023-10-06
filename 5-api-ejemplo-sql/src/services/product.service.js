@@ -35,6 +35,17 @@ async function readProduct(body,response) {
     return response.json(result)
 }
 
+// U update
+async function readProduct(sku, name, description,price,url_image,response) {
+    if ( name === undefined || description === undefined || price === undefined || url_image=== undefined ) {
+        return response.status(400).json({message:"Bad request, porfavor agrega todos los valores necesarios para añadir un producto nuevo"})
+    }
+        const connection = await getConnection();
+        const result = await connection.query("UPDATE products SET `name`=?, `description`=?, `price`=?, `url_image`=? WHERE sku=?", [ name, description, price, url_image, sku]);
+        console.log(result)
+        return response.json(result)
+}
+
 export const methods = {
     readAllProducts,
     createProduct,
