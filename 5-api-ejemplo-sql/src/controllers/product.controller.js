@@ -25,7 +25,6 @@ const postProduct = async (req, res)=>{
 }
 
 // R read es un verbo get en una API restful
-
 const getProductBySku = async (req,res)=>{
     try {
         const query = await productServices.readProduct(req.params,res)
@@ -36,8 +35,23 @@ const getProductBySku = async (req,res)=>{
     }
 }
 
+// U update
+const updateProduct = async (req,res)=>{
+    try {
+        const {sku} = req.params
+        const {name, description,price,url_image} = req.body;
+        const query = await productServices.updateProduct(sku, name, description,price,url_image,res)
+        return query
+    } catch (error) {
+        res.status(400);
+        res.send(error.message);
+    }
+}
+
+
 export const methods = {
     getAllProducts,
     postProduct,
-    getProductBySku
+    getProductBySku,
+    updateProduct
 }
