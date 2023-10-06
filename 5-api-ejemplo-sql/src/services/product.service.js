@@ -28,7 +28,15 @@ async function createProduct(sku, name, description,price,url_image,response) {
         return response.json(result)
 }
 
+// R read
+async function readProduct(body,response) {
+    const connection = await getConnection();
+    const result = await connection.query("SELECT * FROM products WHERE sku=?",body.sku)
+    return response.json(result)
+}
+
 export const methods = {
     readAllProducts,
-    createProduct
+    createProduct,
+    readProduct
 }
