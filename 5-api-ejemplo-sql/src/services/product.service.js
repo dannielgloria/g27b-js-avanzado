@@ -36,18 +36,29 @@ async function readProduct(body,response) {
 }
 
 // U update
-async function readProduct(sku, name, description,price,url_image,response) {
+async function upteProduct(sku, name, description,price,url_image,response) {
     if ( name === undefined || description === undefined || price === undefined || url_image=== undefined ) {
         return response.status(400).json({message:"Bad request, porfavor agrega todos los valores necesarios para añadir un producto nuevo"})
     }
+        console.log("MEXICO")
         const connection = await getConnection();
         const result = await connection.query("UPDATE products SET `name`=?, `description`=?, `price`=?, `url_image`=? WHERE sku=?", [ name, description, price, url_image, sku]);
-        console.log(result)
+        
         return response.json(result)
+}
+
+// D delete
+async function deleteProduct(body,response) {
+    console.log("MONO2")
+    const connection = await getConnection();
+    const query = await connection.query("DELETE FROM products WHERE sku=?",body.sku)
+    return response.json(query)
 }
 
 export const methods = {
     readAllProducts,
     createProduct,
-    readProduct
+    readProduct,
+    upteProduct,
+    deleteProduct
 }

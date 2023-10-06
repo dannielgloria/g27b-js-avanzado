@@ -40,7 +40,10 @@ const updateProduct = async (req,res)=>{
     try {
         const {sku} = req.params
         const {name, description,price,url_image} = req.body;
-        const query = await productServices.updateProduct(sku, name, description,price,url_image,res)
+        const query = await productServices.upteProduct(sku, name, description,price,url_image,res)
+        console.log("SKU:",sku)
+        console.log("Body:",req.body)
+
         return query
     } catch (error) {
         res.status(400);
@@ -48,10 +51,22 @@ const updateProduct = async (req,res)=>{
     }
 }
 
+// D delete
+const deleteProductBySku = async (req,res)=>{
+    try {
+        console.log("MONO")
+        const query = await productServices.deleteProduct(req.params,res);
+        return query
+    } catch (error) {
+        res.status(400);
+        res.send(error.message);
+    }
+}
 
 export const methods = {
     getAllProducts,
     postProduct,
     getProductBySku,
-    updateProduct
+    updateProduct,
+    deleteProductBySku
 }
