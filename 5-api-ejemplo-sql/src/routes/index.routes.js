@@ -7,5 +7,7 @@ const router = Router()
 
 /** Creamos nuestras rutas */
 router.get("/allProducts", productController.getAllProducts); // GET http://127.0.0.1:4000/api-restful/products/allProducts
+//C create
+router.post("/newProduct", productController.postProduct); // POST http://127.0.0.1:4000/api-restful/products/newProduct
 
 export default router;
