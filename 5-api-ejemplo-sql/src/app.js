@@ -2,11 +2,12 @@ import express from "express";
 import morgan from "morgan"
 
 import productRoutes from "./routes/index.routes"
+import { PORT } from "./common/constants";
 
 const app = express();
 
 /** Se setea el puerto en el que correra nuestro server */
-app.set("port",4000);
+app.set("port",PORT);
 
 /** Aqui nosotros declaramos que hacemos uso de Middlewares */
 app.use(morgan("dev"));
