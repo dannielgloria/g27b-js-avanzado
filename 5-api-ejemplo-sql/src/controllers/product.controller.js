@@ -40,6 +40,7 @@ const updateProduct = async (req,res)=>{
     try {
         const {sku} = req.params
         const {name, description,price,url_image} = req.body;
+        // LOGICA DE NEGOCIO por ejemplo aplicar un IVA
         const query = await productServices.upteProduct(sku, name, description,price,url_image,res)
         console.log("SKU:",sku)
         console.log("Body:",req.body)
